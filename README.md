@@ -51,7 +51,7 @@ For the latest information on setting up a development environment, see the [Dev
 Native builds on the Apple Silicon should work out of the box, but the Docker image requires more consideration.
 
 ```bash
-$ docker build . -t chainlink-develop:latest -f ./core/chainlink.Dockerfile
+$ docker build. -t chainlink-developlatest -f ./core/chainlink.Dockerfile
 ```
 
 ### Ethereum Execution Client Requirements
@@ -96,15 +96,15 @@ TLS.HTTPSPort = 0
 DevWebServer = true
 ```
 
-Alternatively, you can generate self signed certificates using `tools/bin/self-signed-certs` or [manually](https://github.com/smartcontractkit/chainlink/wiki/Creating-Self-Signed-Certificates).
+Alternatively, you can generate self-signed certificates using `tools/bin/self-signed-certs` or [manually](https://github.com/smartcontractkit/chainlink/wiki/Creating-Self-Signed-Certificates).
 
-To start your Chainlink node, simply run:
+To start your Chainlink node, simply run folliwing:
 
 ```bash
 chainlink node start
 ```
 
-By default this will start on port 6688. You should be able to access the UI at [http://localhost:6688/](http://localhost:6688/).
+By default, this will start on port 6688. You should be able to access the UI at [http://localhost:6688/](http://localhost:6688/).
 
 Chainlink provides a remote CLI client as well as a UI. Once your node has started, you can open a new terminal window to use the CLI. You will need to log in to authorize the client first:
 
@@ -112,7 +112,7 @@ Chainlink provides a remote CLI client as well as a UI. Once your node has start
 chainlink admin login
 ```
 
-(You can also set `ADMIN_CREDENTIALS_FILE=/path/to/credentials/file` in future if you like, to avoid having to login again).
+(You can also set `ADMIN_CREDENTIALS_FILE=/path/to/credentials/file` in the future if you like, to avoid having to login again).
 
 Now you can view your current jobs with:
 
@@ -126,7 +126,7 @@ Check out the [doc](https://docs.chain.link/) pages on [Jobs](https://docs.chain
 
 ### Configuration
 
-Node configuration is managed by a combination of environment variables and direct setting via API/UI/CLI.
+Node configuration is managed by a combination of environment variables and direct settings via API/UI/CLI.
 
 Check the [official documentation](https://docs.chain.link/docs/configuration-variables) for more information on how to configure your node.
 
@@ -220,7 +220,7 @@ https://go.dev/doc/articles/race_detector
 
 #### Fuzz tests
 
-As of Go 1.18, fuzz tests `func FuzzXXX(*testing.F)` are included as part of the normal test suite, so existing cases are executed with `go test`.
+As of Go 1.18, fuzz tests `func FuzzXXX(*testing.F)` is included as part of the normal test suite, so existing cases are executed with `go test`.
 
 Additionally, you can run active fuzzing to search for new cases:
 
